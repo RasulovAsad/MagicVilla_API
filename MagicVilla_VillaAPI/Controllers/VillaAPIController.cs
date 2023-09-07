@@ -177,34 +177,5 @@ namespace MagicVilla_VillaAPI.Controllers
                 return _response;
             }
         }
-
-        //[HttpPatch("id:int", Name = "UpdatePartialVilla")]
-        //[ProducesResponseType(StatusCodes.Status204NoContent)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //public async Task<IActionResult> UpdatePartialVilla(int id, JsonPatchDocument<VillaUpdateDTO> patchDTO)
-        //{
-        //    if (patchDTO == null || id == 0)
-        //    {
-        //        return BadRequest();
-        //    }
-        //    var villa = await _dbVilla.GetAsync(n => n.Id == id, tracked: false);
-        //    if (villa == null)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    VillaUpdateDTO villaDTO = _mapper.Map<VillaUpdateDTO>(villa);
-
-        //    patchDTO.ApplyTo(villaDTO, ModelState);
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    Villa model = _mapper.Map<Villa>(villaDTO);
-
-        //    await _dbVilla.UpdateAsync(model);
-        //    return NoContent();
-        //}
     }
 }
